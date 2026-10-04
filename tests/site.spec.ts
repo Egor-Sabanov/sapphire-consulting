@@ -13,6 +13,18 @@ test('English homepage is translated', async ({ page }) => {
   await expect(page.locator('body')).not.toContainText('Наши услуги');
 });
 
+
+
+test('Team pages render in both locales', async ({ page }) => {
+  await page.goto('/ru/team');
+  await expect(page.locator('h1')).toHaveText('Профессиональная команда');
+  await expect(page.locator('.teamDetail')).toHaveCount(9);
+
+  await page.goto('/en/team');
+  await expect(page.locator('h1')).toHaveText('Professional team');
+  await expect(page.locator('.teamDetail')).toHaveCount(9);
+});
+
 test('English service page preserves locale', async ({ page }) => {
   await page.goto('/en/services');
   await expect(page).toHaveURL(/\/en\/services$/);

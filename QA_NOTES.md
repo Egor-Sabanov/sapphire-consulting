@@ -26,3 +26,9 @@
 
 ## Dependency fix
 TypeScript is pinned to the published stable 6.0.3 release. TypeScript 6.0.0 is not a published npm version.
+
+## 2026-10-04 content revision
+- Replaced selected homepage copy with wording from the live sbs.expert site for services, solutions, team, clients and contact sections.
+- Added a dedicated /[locale]/team route so Team is handled by an explicit page rather than the generic section router.
+- Added RU/EN team route coverage for all 9 current experts.
+- Updated English team role/team labels to match the live English site where provided.

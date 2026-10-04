@@ -101,3 +101,8 @@ For local development and Vercel, prefer Node.js 24.21.0 LTS. Node 20 is already
 
 ## Dependency fix
 TypeScript is pinned to the published stable 6.0.3 release. TypeScript 6.0.0 is not a published npm version.
+
+## 3.2.5 content + team route revision
+- Restored selected homepage wording from the live sbs.expert site for Services, Business solutions, Professional team, Our clients and Contact.
+- Added an explicit `app/[locale]/team/page.tsx` route so the team page is maintained separately from the generic content-section router.
+- Kept 9 current expert profiles and their available photos.

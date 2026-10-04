@@ -1,6 +1,6 @@
 {
   "name": "sapphire-consulting-site",
-  "version": "3.2.3",
+  "version": "3.2.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
