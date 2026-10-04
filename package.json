@@ -1,0 +1,43 @@
+{
+  "name": "sapphire-consulting-site",
+  "version": "3.2.3",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "check": "npm run lint && npm run typecheck && npm run check:i18n && npm run check:routes && npm run check:api && npm run preflight && npm run test:e2e",
+    "check:i18n": "node scripts/translation-audit.mjs",
+    "check:routes": "node scripts/route-audit.mjs",
+    "check:api": "node scripts/api-contract-audit.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "test:visual": "playwright test tests/visual.spec.ts",
+    "test:visual:update": "playwright test tests/visual.spec.ts --update-snapshots"
+  },
+  "dependencies": {
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.4",
+    "resend": "6.32.0",
+    "@vercel/analytics": "2.0.1",
+    "@vercel/speed-insights": "2.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "22.16.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.8",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "description": "Production corporate website for Sapphire Consulting."
+}
